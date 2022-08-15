@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,7 +8,16 @@
     <title>TikTaCToe</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+    <div class="player-panel">
+        <div  id="player-1">
+            <img src="./imgs/circle.png" class=""> Player 1
+        </div>
+        <div id="player-2" class="player-inaktiv">
+            <img src="./imgs/cross.png" class="">Player 2
+        </div>
+    </div>
     <table>
         <tr>
             <td onclick="fillShape(0)">
@@ -23,7 +33,7 @@
                 <img src="./imgs/cross.png" class="game-imgs d-none" id="cross-2">
             </td>
         </tr>
-    
+
         <tr>
             <td onclick="fillShape(3)">
                 <img src="./imgs/circle.png" class="game-imgs d-none" id="circle-3">
@@ -38,7 +48,7 @@
                 <img src="./imgs/cross.png" class="game-imgs d-none" id="cross-5">
             </td>
         </tr>
-    
+
         <tr>
             <td onclick="fillShape(6)">
                 <img src="./imgs/circle.png" class="game-imgs d-none" id="circle-6">
@@ -56,4 +66,5 @@
     </table>
 </body>
 <script src="script.js"></script>
+
 </html>
