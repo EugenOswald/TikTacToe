@@ -41,6 +41,7 @@ td:hover {
 
 table {
   border-collapse: collapse;
+  position: relative;
 }
 
 table tr:first-child td {
@@ -70,7 +71,61 @@ table tr td:last-child {
   display: none;
 }
 
-
-.player-inaktiv{
+.player-inaktiv {
   opacity: 0.5;
+}
+
+.horizontal-line {
+  height: 10px;
+  width: 350px;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 165px;
+  transform: scaleX(0.0);
+ z-index: 2;
+  transition: transform 225ms ease-in-out;
+}
+
+.position-relative{
+  position: relative;
+}
+
+.make-vertical{
+  transform: rotate(90deg) scaleX(0.0);
+}
+
+.game-over {
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 10;
+  animation: zoomIn 225 ease-in-out; /****Hier wird eine Animation hinterlegt und bei @keyframes definiert***/
+}
+
+@keyframes zoomIn{
+  from {
+    opacity: 0;
+    transform:scale(0)
+  }
+  to {
+    opacity: 1;
+    transform:scale(1)
+  }
+}
+
+.restart-btn{
+  border: 1px solid black;
+  background-color: #1C0B7F;
+  z-index: 12;
+  width: 300px;
+  height: 150px;
+  color: white;
+  font-size: 40px;
+  cursor: pointer;
+  position:absolute;
+  bottom: 100px;
+}
+.restart-btn:hover{
+  background-color: #432dbe;
 }
